@@ -51,15 +51,19 @@ public class BildTierErkennungsService {
 	 * Eigentliche Bildanalyse von Ollama bereitgestellter KI durchführen lassen,
 	 * die herausfinden soll, ob im Bild Tiere zu sehen sind.
 	 * 
-	 * @param bildRessouce Bild/Foto, das analysiert werden soll
+	 * @param bildRessouce Bild/Foto, das analysiert werden soll; Achtung:
+	 *                     dieses Objekt enthält den Dateinamen, daraus könnte 
+	 *                     die KI auch Rückschlüsse auf den Bildinhalt ziehen
 	 * 
-	 * @return
+	 * @return Ergebnis der Analyse (Erkannte Tiere auf Englisch oder "No animal 
+	 *         detected")
 	 */
 	public String bildErkennungDurchfuehren( Resource bildRessouce ) {
 		
 		final String kiAntwortString = _chatClient.prompt()
-		                                          .user( user -> user.text( PROMPT_TEMPLATE )
-		                                        		             .media( IMAGE_JPEG, bildRessouce )
+		                                          .user( 
+		                                        		user -> user.text( PROMPT_TEMPLATE )
+		                                        		            .media( IMAGE_JPEG, bildRessouce )
 		                                        	   )
 		                                          .call()
 		                                          .content();
