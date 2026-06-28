@@ -3,8 +3,8 @@
 <br>
 
 Dieses Repo enthält eine Spring-Boot-Anwendung, die mit [Spring AI](https://spring.io/projects/spring-ai) 
-Bilder zur Erkennung von Tieren an ein mit [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell 
-zu übergeben. 
+eine Bildanalyse (Erkennung von Tieren) durchführt. Hierzu wird das Bild zusammen mit einem Prompt
+an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergeben.
 
 <br>
 
