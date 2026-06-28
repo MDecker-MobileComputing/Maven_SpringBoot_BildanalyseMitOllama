@@ -14,7 +14,10 @@ import org.springframework.stereotype.Service;
 
 import de.eldecker.dhbw.spring.tiererkennung.engine.BildTierErkennungsService;
 
-
+/**
+ * Die in dieser Klasse enthaltene {@code run()}-Methode wird unmittelbar nach
+ * dem Start der Anwendung ausgeführt.
+ */
 @Service
 public class MeinCommandLineRunner implements CommandLineRunner {
 
@@ -26,12 +29,12 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 	@Override
 	public 	void run( String... args ) throws Exception {
 
-		//final Resource bildResource = new ClassPathResource( "bilder/2569336.jpg" ); // Katze
+		final Resource bildResource = new ClassPathResource( "bilder/2569336.jpg" ); // Katze
 		//final Resource bildResource = new ClassPathResource( "bilder/111695.jpg" );  // Elefant
 		//final Resource bildResource = new ClassPathResource( "bilder/667460.jpg" );  // VW Käfer
 		//final Resource bildResource = new ClassPathResource( "bilder/9295172.jpg" ); // Papagei
 		//final Resource bildResource = new ClassPathResource( "bilder/2513178.jpg" ); // Meerschweinchen
-		final Resource bildResource = new ClassPathResource( "bilder/2024041.jpg" ); // Gänse (Zeichnung)
+		//final Resource bildResource = new ClassPathResource( "bilder/2024041.jpg" ); // Gänse (Zeichnung)
 
 		gibBildMetadatenAus( bildResource );
 		
