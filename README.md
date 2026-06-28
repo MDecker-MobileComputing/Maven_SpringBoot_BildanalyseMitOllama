@@ -10,14 +10,34 @@ zu übergeben.
 
 ----
 
-## Bilder im Projekt ##
+## Bilder von Pixabay im Projekt ##
 
 <br>
 
 Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Projekt enthalten:
 
 * [Katze auf Stuhl](https://pixabay.com/photos/animal-cat-feline-mammal-pet-2569336/) 
-  von Nutzer [karishea](https://pixabay.com/users/karishea-10087552/)
+  von Nutzer [karishea](https://pixabay.com/users/karishea-10087552/).
+
+* [Elefant](https://pixabay.com/photos/elephant-animal-zoo-111695/)
+  von Nutzer [kikatani](https://pixabay.com/users/kikatani-35407/).
+
+* [Auto (VW Käfer)](https://pixabay.com/photos/vw-beetle-yellow-beetle-667460/)
+  von Nutzer [congerdesign](https://pixabay.com/users/congerdesign-509903/).
+
+* [Papagei (Blaustirnamazone)](https://pixabay.com/photos/parrot-bird-macaw-plumage-amazon-9295172/)
+  von Nutzer [DavidClode](https://pixabay.com/users/davidclode-43394210/).
+
+* [Meerschweinchen](https://pixabay.com/photos/guinea-pig-the-animal-hamster-hair-2513178/)
+  von Nutzer [Ajale](https://pixabay.com/users/ajale-1481387/).
+
+* [Zwei Gänse (Zeichnung)](https://pixabay.com/vectors/animal-animals-farm-geese-goose-2024041/)
+  von Nutzer [OpenClipart-Vectors](https://pixabay.com/users/openclipart-vectors-30363/).
+  
+<br>
+
+Die Bilder sind im Unterordner [src/main/resources/bilder](src/main/resources/bilder) zu finden, 
+wobei als Dateiname nur die Zahl im Bildbezeichner verwendet wurde.
 
 <br>
 
