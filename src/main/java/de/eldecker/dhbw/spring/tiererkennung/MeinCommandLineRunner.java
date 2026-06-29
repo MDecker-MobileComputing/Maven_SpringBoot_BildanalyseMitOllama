@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import de.eldecker.dhbw.spring.tiererkennung.engine.BildTierErkennungsService;
 
+
 /**
  * Die in dieser Klasse enthaltene {@code run()}-Methode wird unmittelbar nach
  * dem Start der Anwendung ausgeführt.

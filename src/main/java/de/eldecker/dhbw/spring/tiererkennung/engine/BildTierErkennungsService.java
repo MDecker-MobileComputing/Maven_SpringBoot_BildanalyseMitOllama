@@ -38,7 +38,7 @@ public class BildTierErkennungsService {
 
 	
 	/**
-	 * ChatClient-Objekt erzeugen.
+	 * {@ code ChatClient}-Objekt erzeugen.
 	 */
 	@Autowired
 	public BildTierErkennungsService( ChatClient.Builder chatClientBuilder ) {
