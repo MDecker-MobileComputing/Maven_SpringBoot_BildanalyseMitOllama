@@ -2,7 +2,7 @@
 
 <br>
 
-Dieses Repo enthält eine Spring-Boot-Anwendung, die mit [Spring AI](https://spring.io/projects/spring-ai) 
+Dieses Repo enthält eine Spring-Boot-Anwendung, die mit [Spring AI](https://spring.io/projects/spring-ai)
 eine Bildanalyse (Erkennung von Tieren) durchführt. Hierzu wird das Bild zusammen mit einem Prompt
 an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergeben.
 
@@ -16,7 +16,7 @@ an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergebe
 
 Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Projekt enthalten:
 
-* [Katze auf Stuhl](https://pixabay.com/photos/animal-cat-feline-mammal-pet-2569336/) 
+* [Katze auf Stuhl](https://pixabay.com/photos/animal-cat-feline-mammal-pet-2569336/)
   von Nutzer [karishea](https://pixabay.com/users/karishea-10087552/).
 
 * [Elefant](https://pixabay.com/photos/elephant-animal-zoo-111695/)
@@ -33,15 +33,18 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Projekt enthalt
 
 * [Zwei Gänse (Zeichnung)](https://pixabay.com/vectors/animal-animals-farm-geese-goose-2024041/)
   von Nutzer [OpenClipart-Vectors](https://pixabay.com/users/openclipart-vectors-30363/).
-  
+
+* [Bremer Stadtmusikanten (Fotomontage)](https://pixabay.com/photos/pile-animals-fairy-tale-1651945/)
+  von Nutzer [TeeFarm](https://pixabay.com/users/teefarm-199315/).
+
 <br>
 
-Die Bilder sind im Unterordner [src/main/resources/bilder](src/main/resources/bilder) zu finden, 
+Die Bilder sind im Unterordner [src/main/resources/bilder](src/main/resources/bilder) zu finden,
 wobei als Dateiname nur die Zahl im Bildbezeichner verwendet wurde.
 
 <br>
 
-Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit 
+Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
 der KI-Verarbeitung möglichst gering zu halten.
 
 <br>

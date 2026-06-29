@@ -31,10 +31,12 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 
 		final Resource bildResource = new ClassPathResource( "bilder/2569336.jpg" ); // Katze
 		//final Resource bildResource = new ClassPathResource( "bilder/111695.jpg" );  // Elefant
-		//final Resource bildResource = new ClassPathResource( "bilder/667460.jpg" );  // VW Käfer
+	    //final Resource bildResource = new ClassPathResource( "bilder/667460.jpg" );  // VW Käfer -- kein Tier enthalten
 		//final Resource bildResource = new ClassPathResource( "bilder/9295172.jpg" ); // Papagei
+		//final Resource bildResource = new ClassPathResource( "bilder/9295172_klein.jpg" ); // Papagei
 		//final Resource bildResource = new ClassPathResource( "bilder/2513178.jpg" ); // Meerschweinchen
 		//final Resource bildResource = new ClassPathResource( "bilder/2024041.jpg" ); // Gänse (Zeichnung)
+		//final Resource bildResource = new ClassPathResource( "bilder/1651945.jpg" ); // Bremer Stadtmusikanten
 
 		gibBildMetadatenAus( bildResource );
 		
@@ -49,10 +51,16 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 		
 		final long diffNanosekunden = zeitpunktEnde - zeitpunktStart;
 		final double sekunden = diffNanosekunden / 1_000_000_000; // Nanosekunden → Sekunden
-		System.out.println( "Dauer: " + sekunden + " sek" );
+		System.out.println( "Dauer: " + sekunden + " sek\n" );
 	}
 
 
+	/**
+	 * Methode gibt von mit Argument {@code bildResource} übergebene Bilddatei 
+	 * die Größe in kBytes und die Auflösung (Pixel x Pixel) aus.
+	 * 
+	 * @param bildResource Bild, das untersucht werden soll
+	 */
 	private void gibBildMetadatenAus( Resource bildResource ) throws IOException {
 
 		final long dateiGroesseBytes   = bildResource.contentLength();
