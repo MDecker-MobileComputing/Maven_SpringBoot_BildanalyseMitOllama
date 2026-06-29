@@ -19,14 +19,13 @@ import de.eldecker.dhbw.spring.tiererkennung.engine.BildTierErkennungsService;
  * Die in dieser Klasse enthaltene {@code run()}-Methode wird unmittelbar nach
  * dem Start der Anwendung ausgeführt.
  */
-@Service
 public class MeinCommandLineRunner implements CommandLineRunner {
 
 	/** Bean, die eigentliche Kommunikation mit Ollama übernimmt. */
 	@Autowired
 	private final BildTierErkennungsService _tierBildTierErkennungsService = null;
 
-	
+
 	@Override
 	public 	void run( String... args ) throws Exception {
 
@@ -40,16 +39,16 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 		//final Resource bildResource = new ClassPathResource( "bilder/1651945.jpg" ); // Bremer Stadtmusikanten
 
 		gibBildMetadatenAus( bildResource );
-		
+
 		final long zeitpunktStart = System.nanoTime();
-		
-		final String antwort = 
+
+		final String antwort =
 				_tierBildTierErkennungsService.bildErkennungDurchfuehren( bildResource );
-		
+
 		final long zeitpunktEnde = System.nanoTime();
-		
+
 		System.out.println( "\nAntwort KI: " + antwort + "\n" );
-		
+
 		final long diffNanosekunden = zeitpunktEnde - zeitpunktStart;
 		final double sekunden = diffNanosekunden / 1_000_000_000; // Nanosekunden → Sekunden
 		System.out.println( "Dauer: " + sekunden + " sek\n" );
@@ -57,9 +56,9 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 
 
 	/**
-	 * Methode gibt von mit Argument {@code bildResource} übergebene Bilddatei 
+	 * Methode gibt von mit Argument {@code bildResource} übergebene Bilddatei
 	 * die Größe in kBytes und die Auflösung (Pixel x Pixel) aus.
-	 * 
+	 *
 	 * @param bildResource Bild, das untersucht werden soll
 	 */
 	private void gibBildMetadatenAus( Resource bildResource ) throws IOException {
@@ -74,8 +73,8 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 		System.out.printf( "\nBildgroesse: %.1f kByte%n", dateiGroesseKByte );
 		System.out.println( "Aufloesung: " + breite + " x " + hoehe + " px\n" );
 	}
-	
-	
+
+
 	private BufferedImage leseBild( Resource bildResource ) throws IOException {
 
 		final BufferedImage bufferedImage;
@@ -85,11 +84,11 @@ public class MeinCommandLineRunner implements CommandLineRunner {
 		}
 		if ( bufferedImage == null ) {
 
-			throw new IOException( 
+			throw new IOException(
 				"Bild konnte nicht gelesen werden: " + bildResource.getFilename() );
 		}
-		
+
 		return bufferedImage;
 	}
-	
+
 }
