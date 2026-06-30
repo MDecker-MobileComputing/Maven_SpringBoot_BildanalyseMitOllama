@@ -3,6 +3,7 @@
 let formBildHochladen = null;
 let inputBild         = null;
 let buttonHochladen   = null;
+let divErgebnis       = null;
 
 
 /**
@@ -13,6 +14,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 	formBildHochladen = document.getElementById( "bildUploadForm" );
 	inputBild         = document.getElementById( "bildInput"      );
 	buttonHochladen   = document.getElementById( "uploadButton"   );
+	divErgebnis       = document.getElementById( "divErgebnis"    );
 
 	formBildHochladen.addEventListener( "submit", submitHandler );
 });
@@ -27,6 +29,8 @@ async function submitHandler( event ) {
 
 	event.preventDefault(); // Verhindert das Standardverhalten des Formulars (Seiten-Reload)
 
+	divErgebnis.innerHTML = "";
+
 	const datei = inputBild.files[0];
 	if ( !datei ) {
 
@@ -39,7 +43,7 @@ async function submitHandler( event ) {
 					 || datei.name.toLowerCase().endsWith( ".jpeg" );
 	if ( !istJpeg ) {
 
-		alert( "Es sind nur JPEG-Bilder erlaubt." );
+		divErgebnis.innerHTML = "<p>Fehler: Nur JPEG-Bilder sind erlaubt.</p>";
 		return;
 	}
 
@@ -60,11 +64,11 @@ async function submitHandler( event ) {
 		const text = await response.text();
 		if ( !response.ok ) {
 
-			alert( "Fehler beim Upload: " + text );
+			divErgebnis.innerHTML = "<p>Fehler beim Upload: " + text + "</p>";
 			return;
 		}
 
-		alert( text );
+		divErgebnis.innerHTML = "<p>" + text + "</p>";
 
 		// Bild-Input zurücksetzen, damit der gleiche Dateiname erneut hochgeladen werden kann
 		inputBild.value = "";
