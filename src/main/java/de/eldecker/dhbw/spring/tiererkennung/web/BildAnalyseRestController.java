@@ -47,8 +47,11 @@ public class BildAnalyseRestController {
 
 		final Resource bildAlsResource = bild.getResource();
 
-		final String ergebnis = 
+		final String ergebnis =
 				_bildTierErkennung.bildErkennungDurchfuehren( bildAlsResource );
+
+		LOG.info( "Analyse-Ergebnis für \"{}\": \"{}\"",
+		          bild.getOriginalFilename(), ergebnis );
 
 		return ResponseEntity.ok( ergebnis );
 	}

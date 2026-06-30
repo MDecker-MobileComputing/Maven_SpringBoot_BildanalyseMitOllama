@@ -28,8 +28,9 @@ public class BildTierErkennungsService {
     		Identify all animals visible in the provided image and return them as a list.
     		Do not include duplicate animals. If the same animal appears multiple times, list it only once.
     		Only output the list of animals separates by commas, e.g.: dog, elephant.
+			Append a confidence value at the end in this exact format: " | confidence: NN%" (0-100).
+		    If no animal is detected, output exactly: "No animal detected | confidence: NN%".
     		Do not give explanations.
-    		When no animal is detected write "No animal detected".
     		""";
 
 

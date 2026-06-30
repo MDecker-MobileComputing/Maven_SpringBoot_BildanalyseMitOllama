@@ -41,6 +41,15 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Pfeilgiftfrosch](https://pixabay.com/photos/nature-wildlife-amphibian-frog-3333637/)
   von Nutzer [Xaya](https://pixabay.com/users/xaya-258703/).
 
+* [Basilisk (Jesus-Christus-Echse)](https://pixabay.com/photos/basilisk-lizard-animal-reptile-5951351/)
+  von Nutzer [YanCabrera](https://pixabay.com/users/yancabrera-3521614/).
+
+* [Gummi-Enten](https://pixabay.com/photos/duck-meet-ducks-rubber-ducks-4818719/)
+  von Nutzer [manfredrichter](https://pixabay.com/users/manfredrichter-4055600/).
+
+* [Hund (Airedale Terrier)](https://pixabay.com/de/photos/airedale-terrier-gl%C3%BCcklich-strand-1875288/)
+  von Nutzer [airedalelover](https://pixabay.com/de/users/airedalelover-3879600/).
+
 <br>
 
 Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
