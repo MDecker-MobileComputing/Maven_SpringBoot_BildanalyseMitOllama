@@ -1,4 +1,4 @@
-# Bildanalyse mit *Spring AI* #
+# Bildanalyse mit *Spring AI* und Ollama #
 
 <br>
 
@@ -11,7 +11,7 @@ erkennen soll.
 
 ----
 
-## Bilder von Pixabay im Projekt ##
+## Bilder von Pixabay im Repository ##
 
 <br>
 
