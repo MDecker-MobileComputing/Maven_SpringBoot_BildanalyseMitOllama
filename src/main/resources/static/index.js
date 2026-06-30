@@ -4,6 +4,8 @@ let formBildHochladen = null;
 let inputBild         = null;
 let buttonHochladen   = null;
 let divErgebnis       = null;
+let divWartezeit      = null;
+
 let timerErgebnis     = null;
 let sekundenWarten    = 0;
 
@@ -17,6 +19,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 	inputBild         = document.getElementById( "bildInput"      );
 	buttonHochladen   = document.getElementById( "uploadButton"   );
 	divErgebnis       = document.getElementById( "divErgebnis"    );
+	divWartezeit      = document.getElementById( "divWartezeit"   );
 
 	formBildHochladen.addEventListener( "submit", submitHandler );
 });
@@ -38,12 +41,13 @@ async function submitHandler( event ) {
 	}
 	sekundenWarten = 0;
 
-	divErgebnis.innerHTML = "";
+	divWartezeit.innerHTML = "";
+	divErgebnis.innerHTML  = "";
 
 	const datei = inputBild.files[0];
 	if ( !datei ) {
 
-		alert( "Bitte ein JPEG-Bild auswählen." );
+		divErgebnis.innerHTML = "<p><span class=\"fett\">Fehler:</span> Bitte ein JPEG-Bild auswählen.</p>";
 		return;
 	}
 
@@ -52,7 +56,7 @@ async function submitHandler( event ) {
 					 || datei.name.toLowerCase().endsWith( ".jpeg" );
 	if ( !istJpeg ) {
 
-		divErgebnis.innerHTML = "<p>Fehler: Nur JPEG-Bilder sind erlaubt.</p>";
+		divErgebnis.innerHTML = "<p><span class=\"fett\">Fehler:</span> Nur JPEG-Bilder sind erlaubt.</p>";
 		return;
 	}
 
@@ -60,11 +64,13 @@ async function submitHandler( event ) {
 	formData.append( "bild", datei );
 
 	buttonHochladen.disabled = true;
-	divErgebnis.innerHTML = "<p>Bildanalyse läuft: 0 Sekunden ...</p>";
+
+	zeigeWartezeit();
+
 	timerErgebnis = setInterval( function() {
 
 		sekundenWarten++;
-		divErgebnis.innerHTML = "<p>Bildanalyse läuft: " + sekundenWarten + " Sekunden ...</p>";
+		zeigeWartezeit();
 	}, 1000 );
 
 
@@ -82,11 +88,13 @@ async function submitHandler( event ) {
 		timerErgebnis = null;
 		if ( !response.ok ) {
 
-			divErgebnis.innerHTML = "<p>Fehler beim Upload: " + text + "</p>";
+			divErgebnis.innerHTML =
+				"<p><span class=\"fett\">Fehler beim Upload:</span> " + text + "</p>";
 			return;
 		}
 
-		divErgebnis.innerHTML = "<p>" + text + "</p>";
+		divErgebnis.innerHTML =
+			"<p><span class=\"fett\">Analyse-Ergebnis:</span> " + text + "</p>";
 
 		// Bild-Input zurücksetzen, damit der gleiche Dateiname erneut hochgeladen werden kann
 		inputBild.value = "";
@@ -96,7 +104,8 @@ async function submitHandler( event ) {
 		clearInterval( timerErgebnis );
 		timerErgebnis = null;
 
-		alert( "Netzwerkfehler beim Upload: " + fehler.message );
+		divErgebnis.innerHTML =
+			"<p><span class=\"fett\">Fehler:</span> Netzwerkfehler beim Upload: " + fehler.message + "</p>";
 
 	} finally {
 
@@ -109,4 +118,13 @@ async function submitHandler( event ) {
 
 		buttonHochladen.disabled = false;
 	}
+}
+
+/**
+ * Zeigt die aktuelle Wartezeit in Sekunden an.
+ */
+function zeigeWartezeit() {
+
+	divWartezeit.innerHTML =
+			"<p><span class=\"fett\">Dauer Bildanalyse:</span> " + sekundenWarten + " Sekunden</p>";
 }

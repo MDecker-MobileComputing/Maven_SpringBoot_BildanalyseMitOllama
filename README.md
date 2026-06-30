@@ -38,6 +38,9 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Bremer Stadtmusikanten (Fotomontage)](https://pixabay.com/photos/pile-animals-fairy-tale-1651945/)
   von Nutzer [TeeFarm](https://pixabay.com/users/teefarm-199315/).
 
+* [Pfeilgiftfrosch](https://pixabay.com/photos/nature-wildlife-amphibian-frog-3333637/)
+  von Nutzer [Xaya](https://pixabay.com/users/xaya-258703/).
+
 <br>
 
 Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
