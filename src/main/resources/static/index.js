@@ -2,6 +2,7 @@
 
 let formBildHochladen = null;
 let inputBild         = null;
+let inputKiModell     = null;
 let buttonHochladen   = null;
 let buttonReset       = null;
 let divErgebnis       = null;
@@ -20,6 +21,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 
 	formBildHochladen = document.getElementById( "bildUploadForm" );
 	inputBild         = document.getElementById( "bildInput"      );
+	inputKiModell     = document.getElementById( "kiModellInput"  );
 	buttonHochladen   = document.getElementById( "uploadButton"   );
 	buttonReset       = document.getElementById( "resetButton"    );
 	divErgebnis       = document.getElementById( "divErgebnis"    );
@@ -81,7 +83,8 @@ async function submitHandler( event ) {
 	zeigeBild( datei );
 
 	const formData = new FormData();
-	formData.append( "bild", datei );
+	formData.append( "bild"    , datei               );
+	formData.append( "kiModell", inputKiModell.value );
 
 	buttonHochladen.disabled = true;
 	buttonReset.disabled     = true;
@@ -92,14 +95,14 @@ async function submitHandler( event ) {
 
 		sekundenWarten++;
 		zeigeWartezeit();
-	}, 1000 );
+	}, 1000 ); // 1 Sekunde = 1000 Millisekunden
 
 
 	try {
 
 		const payloadObjekt = {
 			method: "POST",
-			body: formData
+			body  : formData
 		};
 
 		const response = await fetch( "/app/v1/tiersuche", payloadObjekt );
@@ -117,16 +120,14 @@ async function submitHandler( event ) {
 		divErgebnis.innerHTML =
 			"<p><span class=\"fett\">Analyse-Ergebnis:</span> " + text + "</p>";
 
-		// Bild-Input zurücksetzen, damit der gleiche Dateiname erneut hochgeladen werden kann
-		inputBild.value = "";
-
 	} catch ( fehler ) {
 
 		clearInterval( timerErgebnis );
 		timerErgebnis = null;
 
 		divErgebnis.innerHTML =
-			"<p><span class=\"fett\">Fehler:</span> Netzwerkfehler beim Upload: " + fehler.message + "</p>";
+			"<p><span class=\"fett\">Fehler:</span> Netzwerkfehler beim Upload: " +
+			fehler.message + "</p>";
 
 	} finally {
 

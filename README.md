@@ -61,6 +61,9 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Vogel (Wiedehopf)](https://pixabay.com/photos/bird-hoopoe-feathers-plumage-5918935/)
   von Nutzer [BarbeeAnne](https://pixabay.com/users/barbeeanne-516629/).
 
+* [Katze in Schachtel](https://pixabay.com/photos/cat-amazon-box-siberian-cat-6029230/)
+  von Nutzer [lorivanv](https://pixabay.com/users/lorivanv-20160681/).
+
 <br>
 
 **Keine Tiere:**
