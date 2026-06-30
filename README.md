@@ -14,7 +14,8 @@ an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergebe
 
 <br>
 
-Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Projekt enthalten:
+Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
+[bilder](bilder/) enthalten:
 
 * [Katze auf Stuhl](https://pixabay.com/photos/animal-cat-feline-mammal-pet-2569336/)
   von Nutzer [karishea](https://pixabay.com/users/karishea-10087552/).
@@ -36,11 +37,6 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Projekt enthalt
 
 * [Bremer Stadtmusikanten (Fotomontage)](https://pixabay.com/photos/pile-animals-fairy-tale-1651945/)
   von Nutzer [TeeFarm](https://pixabay.com/users/teefarm-199315/).
-
-<br>
-
-Die Bilder sind im Unterordner [src/main/resources/bilder](src/main/resources/bilder) zu finden,
-wobei als Dateiname nur die Zahl im Bildbezeichner verwendet wurde.
 
 <br>
 
