@@ -162,6 +162,9 @@ function resetBildVorschau() {
 		URL.revokeObjectURL( bildVorschauUrl );
 		bildVorschauUrl = null;
 	}
+
+	imgBild.removeAttribute( "src" );
+	imgBild.style.display = "none";
 }
 
 

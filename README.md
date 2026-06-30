@@ -4,7 +4,8 @@
 
 Dieses Repo enthält eine Spring-Boot-Anwendung, die mit [Spring AI](https://spring.io/projects/spring-ai)
 eine Bildanalyse (Erkennung von Tieren) durchführt. Hierzu wird das Bild zusammen mit einem Prompt
-an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergeben.
+an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergeben, das im Bild Tiere
+erkennen soll.
 
 <br>
 
@@ -15,16 +16,17 @@ an ein von [Ollama](https://ollama.com/) lokal ausgeführtes KI-Modell übergebe
 <br>
 
 Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
-[bilder/](bilder/) enthalten:
+[bilder/](bilder/) enthalten.
+
+<br>
+
+**Tiere:**
 
 * [Katze auf Stuhl](https://pixabay.com/photos/animal-cat-feline-mammal-pet-2569336/)
   von Nutzer [karishea](https://pixabay.com/users/karishea-10087552/).
 
 * [Elefant](https://pixabay.com/photos/elephant-animal-zoo-111695/)
   von Nutzer [kikatani](https://pixabay.com/users/kikatani-35407/).
-
-* [Auto (VW Käfer)](https://pixabay.com/photos/vw-beetle-yellow-beetle-667460/)
-  von Nutzer [congerdesign](https://pixabay.com/users/congerdesign-509903/).
 
 * [Papagei (Blaustirnamazone)](https://pixabay.com/photos/parrot-bird-macaw-plumage-amazon-9295172/)
   von Nutzer [DavidClode](https://pixabay.com/users/davidclode-43394210/).
@@ -53,11 +55,21 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Nasenaffe](https://pixabay.com/photos/proboscis-monkey-primate-monkey-2422095/)
   von Nutzer [pen_ash](https://pixabay.com/users/pen_ash-5526837/).
 
+* [Blaufußtölpel](https://pixabay.com/photos/ecuador-blue-footed-boobies-wildlife-4259426/)
+  von Nutzer [hbieser](https://pixabay.com/users/hbieser-343207/).
+
+* [Vogel (Wiedehopf)](https://pixabay.com/photos/bird-hoopoe-feathers-plumage-5918935/)
+  von Nutzer [BarbeeAnne](https://pixabay.com/users/barbeeanne-516629/).
+
+<br>
+
+**Keine Tiere:**
+
 * [Drehstuhl](https://pixabay.com/illustrations/ai-generated-chair-office-chair-8895614/)
   von Nutzer [geralt](https://pixabay.com/users/geralt-9301/).
 
-* [Blaufußtölpel](https://pixabay.com/photos/ecuador-blue-footed-boobies-wildlife-4259426/)
-  von Nutzer [hbieser](https://pixabay.com/users/hbieser-343207/).
+* [Auto (VW Käfer)](https://pixabay.com/photos/vw-beetle-yellow-beetle-667460/)
+  von Nutzer [congerdesign](https://pixabay.com/users/congerdesign-509903/).
 
 <br>
 
