@@ -56,6 +56,9 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Drehstuhl](https://pixabay.com/illustrations/ai-generated-chair-office-chair-8895614/)
   von Nutzer [geralt](https://pixabay.com/users/geralt-9301/).
 
+* [Blaufußtölpel](https://pixabay.com/photos/ecuador-blue-footed-boobies-wildlife-4259426/)
+  von Nutzer [hbieser](https://pixabay.com/users/hbieser-343207/).
+
 <br>
 
 Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
