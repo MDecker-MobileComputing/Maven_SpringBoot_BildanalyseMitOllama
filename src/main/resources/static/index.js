@@ -4,6 +4,8 @@ let formBildHochladen = null;
 let inputBild         = null;
 let buttonHochladen   = null;
 let divErgebnis       = null;
+let timerErgebnis     = null;
+let sekundenWarten    = 0;
 
 
 /**
@@ -29,6 +31,13 @@ async function submitHandler( event ) {
 
 	event.preventDefault(); // Verhindert das Standardverhalten des Formulars (Seiten-Reload)
 
+	if ( timerErgebnis !== null ) {
+
+		clearInterval( timerErgebnis );
+		timerErgebnis = null;
+	}
+	sekundenWarten = 0;
+
 	divErgebnis.innerHTML = "";
 
 	const datei = inputBild.files[0];
@@ -51,6 +60,12 @@ async function submitHandler( event ) {
 	formData.append( "bild", datei );
 
 	buttonHochladen.disabled = true;
+	divErgebnis.innerHTML = "<p>Warte auf Antwort: 0 Sekunden ...</p>";
+	timerErgebnis = setInterval( function() {
+
+		sekundenWarten++;
+		divErgebnis.innerHTML = "<p>Warte auf Antwort: " + sekundenWarten + " Sekunden ...</p>";
+	}, 1000 );
 
 	try {
 
@@ -62,6 +77,8 @@ async function submitHandler( event ) {
 		const response = await fetch( "/app/v1/tiersuche", payloadObjekt );
 
 		const text = await response.text();
+		clearInterval( timerErgebnis );
+		timerErgebnis = null;
 		if ( !response.ok ) {
 
 			divErgebnis.innerHTML = "<p>Fehler beim Upload: " + text + "</p>";
@@ -75,9 +92,19 @@ async function submitHandler( event ) {
 
 	} catch ( fehler ) {
 
+		clearInterval( timerErgebnis );
+		timerErgebnis = null;
+
 		alert( "Netzwerkfehler beim Upload: " + fehler.message );
 
 	} finally {
+
+		if ( timerErgebnis !== null ) {
+
+			clearInterval( timerErgebnis );
+			timerErgebnis = null;
+		}
+		sekundenWarten = 0;
 
 		buttonHochladen.disabled = false;
 	}

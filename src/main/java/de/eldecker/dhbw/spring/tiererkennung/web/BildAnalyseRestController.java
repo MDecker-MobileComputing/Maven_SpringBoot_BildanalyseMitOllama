@@ -23,8 +23,8 @@ import de.eldecker.dhbw.spring.tiererkennung.engine.BildTierErkennungsService;
 @RequestMapping( "/app/v1" )
 public class BildAnalyseRestController {
 
-	private final static Logger LOG = LoggerFactory.getLogger( BildAnalyseRestController.class ); 
-	
+	private final static Logger LOG = LoggerFactory.getLogger( BildAnalyseRestController.class );
+
 	/** Service-Bean mit eigentlicher KI-Kommunikation. */
 	@Autowired
 	private BildTierErkennungsService _bildTierErkennung;
@@ -36,7 +36,7 @@ public class BildAnalyseRestController {
 	 *
 	 * @param bild Hochgeladenes Bild
 	 *
-	 * @return
+	 * @return ResponseEntity mit Text, der an den Client zurückgegeben wird.
 	 */
 	@PostMapping( value = "/tiersuche", consumes = MULTIPART_FORM_DATA_VALUE )
 	public ResponseEntity<String> sucheTiere( @RequestParam("bild") MultipartFile bild ) {
@@ -50,7 +50,7 @@ public class BildAnalyseRestController {
 
 		} catch ( InterruptedException ex ) {
 
-			LOG.error( "Fehler während Wartezeit: " + ex.getMessage() ); 					 
+			LOG.error( "Fehler während Wartezeit: " + ex.getMessage() );
 		}
 
 		return ResponseEntity.ok(
