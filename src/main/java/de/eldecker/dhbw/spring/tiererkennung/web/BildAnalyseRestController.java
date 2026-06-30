@@ -4,8 +4,8 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +25,7 @@ public class BildAnalyseRestController {
 
 	private final static Logger LOG = LoggerFactory.getLogger( BildAnalyseRestController.class );
 
+
 	/** Service-Bean mit eigentlicher KI-Kommunikation. */
 	@Autowired
 	private BildTierErkennungsService _bildTierErkennung;
@@ -41,19 +42,14 @@ public class BildAnalyseRestController {
 	@PostMapping( value = "/tiersuche", consumes = MULTIPART_FORM_DATA_VALUE )
 	public ResponseEntity<String> sucheTiere( @RequestParam("bild") MultipartFile bild ) {
 
-		final int bildBytes = (int) bild.getSize();
+		LOG.info( "Bild \"{}\" für Analyse erhalten ({} Bytes).",
+				  bild.getOriginalFilename(), bild.getSize() );
 
-		// Antwort absichtlich um 10 Sekunden verzögern
-		try {
+		final Resource bildAlsResource = bild.getResource();
 
-			Thread.sleep( 10_000 );
+		final String ergebnis = 
+				_bildTierErkennung.bildErkennungDurchfuehren( bildAlsResource );
 
-		} catch ( InterruptedException ex ) {
-
-			LOG.error( "Fehler während Wartezeit: " + ex.getMessage() );
-		}
-
-		return ResponseEntity.ok(
-				"Bildanalyse erfolgreich durchgeführt: " + bildBytes + " Bytes" );
+		return ResponseEntity.ok( ergebnis );
 	}
 }

@@ -60,12 +60,13 @@ async function submitHandler( event ) {
 	formData.append( "bild", datei );
 
 	buttonHochladen.disabled = true;
-	divErgebnis.innerHTML = "<p>Warte auf Antwort: 0 Sekunden ...</p>";
+	divErgebnis.innerHTML = "<p>Bildanalyse läuft: 0 Sekunden ...</p>";
 	timerErgebnis = setInterval( function() {
 
 		sekundenWarten++;
-		divErgebnis.innerHTML = "<p>Warte auf Antwort: " + sekundenWarten + " Sekunden ...</p>";
+		divErgebnis.innerHTML = "<p>Bildanalyse läuft: " + sekundenWarten + " Sekunden ...</p>";
 	}, 1000 );
+
 
 	try {
 
