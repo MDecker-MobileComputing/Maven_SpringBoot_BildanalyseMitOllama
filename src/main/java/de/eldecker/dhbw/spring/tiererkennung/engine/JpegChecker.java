@@ -27,7 +27,7 @@ public class JpegChecker {
      *                                 oder ungültiger Dateityp (nicht image/jpeg)
      */
     public void ueberpruefeObJpegDatei( Resource resource )
-    							throws BildErkennungsException {
+    		throws BildErkennungsException {
 
         if ( resource == null ) {
 

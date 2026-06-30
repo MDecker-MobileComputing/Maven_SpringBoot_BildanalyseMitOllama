@@ -48,9 +48,9 @@ public class BildAnalyseRestController {
 	 */
 	@PostMapping( value = "/tiersuche", consumes = MULTIPART_FORM_DATA_VALUE )
 	public ResponseEntity<String> sucheTiere(
-			                          @RequestParam("bild") MultipartFile bild,
-									  @RequestParam(value = "kiModell", defaultValue = "") String kiModell
-							   ) throws BildErkennungsException {
+              @RequestParam("bild") MultipartFile bild,
+			  @RequestParam(value = "kiModell", defaultValue = "") String kiModell
+							                ) throws BildErkennungsException {
 
 		LOG.info( "Bild \"{}\" für Analyse erhalten ({} Bytes); Modell=\"{}\".",
 				  bild.getOriginalFilename(), bild.getSize(), kiModell );

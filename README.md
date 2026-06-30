@@ -64,6 +64,9 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Katze in Schachtel](https://pixabay.com/photos/cat-amazon-box-siberian-cat-6029230/)
   von Nutzer [lorivanv](https://pixabay.com/users/lorivanv-20160681/).
 
+* [Einäugiges Monster](https://pixabay.com/illustrations/cute-monster-cartoon-character-9864872/)
+  von Nutzer [izafi](https://pixabay.com/users/izafi-5325907/).
+
 <br>
 
 **Keine Tiere:**
