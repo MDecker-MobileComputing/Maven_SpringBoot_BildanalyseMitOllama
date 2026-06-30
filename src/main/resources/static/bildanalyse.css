@@ -1,6 +1,7 @@
+
 body {
     font-family: sans-serif;
-    padding: 1em;
+    padding    : 1em;
 }
 
 h1 {
@@ -9,4 +10,18 @@ h1 {
 
 .fett {
     font-weight: bold;
+}
+
+#bild {
+    max-width: 100%;
+    height   : auto;
+    display  : none;
+}
+
+#bild {
+    border: none;
+}
+
+#bild[src] {
+    border: 1px solid black;
 }

@@ -5,6 +5,8 @@ let inputBild         = null;
 let buttonHochladen   = null;
 let divErgebnis       = null;
 let divWartezeit      = null;
+let imgBild           = null;
+let bildVorschauUrl   = null;
 
 let timerErgebnis     = null;
 let sekundenWarten    = 0;
@@ -20,6 +22,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 	buttonHochladen   = document.getElementById( "uploadButton"   );
 	divErgebnis       = document.getElementById( "divErgebnis"    );
 	divWartezeit      = document.getElementById( "divWartezeit"   );
+	imgBild           = document.getElementById( "bild"           );
 
 	formBildHochladen.addEventListener( "submit", submitHandler );
 });
@@ -43,6 +46,7 @@ async function submitHandler( event ) {
 
 	divWartezeit.innerHTML = "";
 	divErgebnis.innerHTML  = "";
+	resetBildVorschau();
 
 	const datei = inputBild.files[0];
 	if ( !datei ) {
@@ -59,6 +63,8 @@ async function submitHandler( event ) {
 		divErgebnis.innerHTML = "<p><span class=\"fett\">Fehler:</span> Nur JPEG-Bilder sind erlaubt.</p>";
 		return;
 	}
+
+	zeigeBild( datei );
 
 	const formData = new FormData();
 	formData.append( "bild", datei );
@@ -127,4 +133,32 @@ function zeigeWartezeit() {
 
 	divWartezeit.innerHTML =
 			"<p><span class=\"fett\">Dauer Bildanalyse:</span> " + sekundenWarten + " Sekunden</p>";
+}
+
+
+/**
+ * Evtl. angezeigtes Bild verschwinden lassen.
+ */
+function resetBildVorschau() {
+
+	if ( bildVorschauUrl !== null ) {
+
+		URL.revokeObjectURL( bildVorschauUrl );
+		bildVorschauUrl = null;
+	}
+}
+
+
+/**
+ * Zeigt das ausgewählte Bild im IMG-Element an.
+ *
+ * @param {File} datei Ausgewählte Bilddatei
+ */
+function zeigeBild( datei ) {
+
+	resetBildVorschau();
+
+	bildVorschauUrl = URL.createObjectURL( datei );
+	imgBild.src = bildVorschauUrl;
+	imgBild.style.display = "block";
 }

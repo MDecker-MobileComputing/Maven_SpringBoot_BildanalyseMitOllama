@@ -50,6 +50,12 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Hund (Airedale Terrier)](https://pixabay.com/de/photos/airedale-terrier-gl%C3%BCcklich-strand-1875288/)
   von Nutzer [airedalelover](https://pixabay.com/de/users/airedalelover-3879600/).
 
+* [Nasenaffe](https://pixabay.com/photos/proboscis-monkey-primate-monkey-2422095/)
+  von Nutzer [pen_ash](https://pixabay.com/users/pen_ash-5526837/).
+
+* [Drehstuhl](https://pixabay.com/illustrations/ai-generated-chair-office-chair-8895614/)
+  von Nutzer [geralt](https://pixabay.com/users/geralt-9301/).
+
 <br>
 
 Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
