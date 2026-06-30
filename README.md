@@ -81,6 +81,9 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
 * [Auto (VW Käfer)](https://pixabay.com/photos/vw-beetle-yellow-beetle-667460/)
   von Nutzer [congerdesign](https://pixabay.com/users/congerdesign-509903/).
 
+* [Mensch](https://pixabay.com/photos/happy-white-white-teeth-teeth-6889595/)
+  von Nutzer [davidjonasfrei](https://pixabay.com/users/davidjonasfrei-14735032/).
+
 <br>
 
 Die Bilder wurden in der kleinsten verfügbaren Auflösung heruntergeladen, um die Laufzeit
