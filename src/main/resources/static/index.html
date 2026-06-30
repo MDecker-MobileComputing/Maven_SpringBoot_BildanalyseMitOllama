@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Bildanalyse mit Ollama</title>
+    <title>Bildanalyse mit Ollama: Tiere suchen</title>
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bildanalyse.css">
 </head>
 <body>
 
-  <h1>Bildanalyse mit Ollama</h1>
+  <h1>Bildanalyse mit Ollama: Tiere suchen</h1>
 
-  <form method="POST" enctype="multipart/form-data" action="app/bild">
-
-      <input type="file" name="bild" accept="image/jpeg">
-      <br><br>
-
-      <input type="submit" value="Hochladen">
-      <input type="reset"  value="Zurücksetzen">
-
+  <form id="bildUploadForm">
+    <label for="bildInput">Bild auswählen (nur JPEG):</label>
+    <input id="bildInput" name="bild" type="file" accept="image/jpeg,.jpg,.jpeg" required>
+    <br><br>
+    <button id="uploadButton" type="submit">Bild analysieren</button>
   </form>
-  <br>
-
-  <p>Es werden nur JPEG-Bilder unterstützt.</p>
 
   <script src="index.js"></script>
 
