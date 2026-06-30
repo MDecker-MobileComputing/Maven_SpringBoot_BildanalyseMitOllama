@@ -9,6 +9,10 @@ erkennen soll.
 
 <br>
 
+![Screenshot](screenshot_1.png)
+
+<br>
+
 ----
 
 ## Bilder von Pixabay im Repository ##
@@ -29,7 +33,7 @@ Die folgenden Bilder von [Pixabay](https://pixabay.com/) sind im Unterordner
   von Nutzer [kikatani](https://pixabay.com/users/kikatani-35407/).
 
 * [Papagei (Blaustirnamazone)](https://pixabay.com/photos/parrot-bird-macaw-plumage-amazon-9295172/)
-  von Nutzer [DavidClode](https://pixabay.com/users/davidclode-43394210/).
+  von Nutzer [DavidClode](https://pixabay.com/users/davidclode-43394210/) – siehe auch Screenshot oben.
 
 * [Meerschweinchen](https://pixabay.com/photos/guinea-pig-the-animal-hamster-hair-2513178/)
   von Nutzer [Ajale](https://pixabay.com/users/ajale-1481387/).
