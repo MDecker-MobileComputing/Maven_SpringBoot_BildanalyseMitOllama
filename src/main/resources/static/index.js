@@ -110,15 +110,14 @@ async function submitHandler( event ) {
 
 		const response = await fetch( "/app/v1/tiersuche", payloadObjekt );
 
-		const text = await response.text();
-		clearInterval( timerErgebnis );
-		timerErgebnis = null;
 		if ( !response.ok ) {
 
 			divErgebnis.innerHTML =
 				"<p><span class=\"fett\">Fehler beim Upload:</span> " + text + "</p>";
 			return;
 		}
+
+		const text = await response.text();
 
 		divErgebnis.innerHTML =
 			"<p><span class=\"fett\">Analyse-Ergebnis:</span> " + text + "</p>";
