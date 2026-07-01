@@ -28,7 +28,7 @@ document.addEventListener( "DOMContentLoaded", function() {
 	divWartezeit      = document.getElementById( "divWartezeit"   );
 	imgBild           = document.getElementById( "bild"           );
 
-	formBildHochladen.addEventListener( "submit", submitHandler );
+	formBildHochladen.addEventListener( "submit", onAnalyseButtonClick );
 
 	buttonReset.addEventListener( "click", onResetButtonClick );
 });
@@ -48,11 +48,11 @@ function onResetButtonClick() {
 }
 
 /**
- * Submit-Eventhandler für Bild-Upload-Formular.
+ * Event-Handler für Button "Analyse starten".
  *
  * @param {SubmitEvent} event Submit-Event
  */
-async function submitHandler( event ) {
+async function onAnalyseButtonClick( event ) {
 
 	event.preventDefault(); // Verhindert das Standardverhalten des Formulars (Seiten-Reload)
 
