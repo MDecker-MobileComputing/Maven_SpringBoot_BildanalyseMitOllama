@@ -91,7 +91,7 @@ public class BildTierErkennungsService {
 	public String bildErkennungDurchfuehren( Resource bildRessouce, String kiModell )
 			throws BildErkennungsException {
 
-		final String kiModellEffektiv = kiModellAuswerten( kiModell );
+		final String kiModellEffektiv = kiModellAuswerten( kiModell ); // throws BildErkennungsException
 		
 		_jpegChecker.ueberpruefeObJpegDatei( bildRessouce ); // throws BildErkennungsException
 
@@ -109,7 +109,7 @@ public class BildTierErkennungsService {
 		                          user -> user.text( PROMPT_TEMPLATE )
 		                                      .media(
 		                                              IMAGE_JPEG,
-		                                        		bildRessouce
+		                                        	  bildRessouce
                                                     )
 		                         )
 		                   .options( chatOptions )
