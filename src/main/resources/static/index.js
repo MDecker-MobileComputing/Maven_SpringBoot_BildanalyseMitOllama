@@ -125,9 +125,6 @@ async function submitHandler( event ) {
 
 	} catch ( fehler ) {
 
-		clearInterval( timerErgebnis );
-		timerErgebnis = null;
-
 		divErgebnis.innerHTML =
 			"<p><span class=\"fett\">Fehler:</span> Netzwerkfehler beim Upload: " +
 			fehler.message + "</p>";
@@ -153,7 +150,7 @@ async function submitHandler( event ) {
 function zeigeWartezeit() {
 
 	divWartezeit.innerHTML =
-		"<p><span class=\"fett\">Dauer Bildanalyse:</span> " + sekundenWarten + " Sekunden</p>";
+		`<p><span class=\"fett\">Dauer Bildanalyse:</span> ${sekundenWarten} Sekunden</p>`;
 }
 
 
