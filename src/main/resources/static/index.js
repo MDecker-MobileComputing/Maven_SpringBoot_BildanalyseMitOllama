@@ -67,7 +67,9 @@ async function submitHandler( event ) {
 	const datei = inputBild.files[0];
 	if ( !datei ) {
 
-		divErgebnis.innerHTML = "<p><span class=\"fett\">Fehler:</span> Bitte ein JPEG-Bild auswählen.</p>";
+		divErgebnis.innerHTML =
+			"<p><span class=\"fett\">Fehler:</span> Bitte ein JPEG-Bild auswählen.</p>";
+
 		return;
 	}
 
@@ -76,7 +78,8 @@ async function submitHandler( event ) {
 					 || datei.name.toLowerCase().endsWith( ".jpeg" );
 	if ( !istJpeg ) {
 
-		divErgebnis.innerHTML = "<p><span class=\"fett\">Fehler:</span> Nur JPEG-Bilder sind erlaubt.</p>";
+		divErgebnis.innerHTML =
+			"<p><span class=\"fett\">Fehler:</span> Nur JPEG-Bilder sind erlaubt.</p>";
 		return;
 	}
 
@@ -143,13 +146,14 @@ async function submitHandler( event ) {
 	}
 }
 
+
 /**
  * Zeigt die aktuelle Wartezeit in Sekunden an.
  */
 function zeigeWartezeit() {
 
 	divWartezeit.innerHTML =
-			"<p><span class=\"fett\">Dauer Bildanalyse:</span> " + sekundenWarten + " Sekunden</p>";
+		"<p><span class=\"fett\">Dauer Bildanalyse:</span> " + sekundenWarten + " Sekunden</p>";
 }
 
 
